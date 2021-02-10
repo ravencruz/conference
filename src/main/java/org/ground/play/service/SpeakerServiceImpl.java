@@ -1,7 +1,6 @@
 package org.ground.play.service;
 
 import org.ground.play.model.Speaker;
-import org.ground.play.repository.HibernateSpeakerRepositoryImpl;
 import org.ground.play.repository.SpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

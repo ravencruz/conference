@@ -32,4 +32,9 @@ public class SpeakerServiceImpl implements SpeakerService {
         System.out.println("SpeakerServiceImpl SETTER");
         this.repository = repository;
     }
+
+    public void setSpeakerRepository(SpeakerRepository repository) {
+        System.out.println("SpeakerServiceImpl SETTER");
+        this.repository = repository;
+    }
 }

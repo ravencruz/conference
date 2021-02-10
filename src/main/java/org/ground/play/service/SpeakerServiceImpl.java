@@ -3,12 +3,14 @@ package org.ground.play.service;
 import org.ground.play.model.Speaker;
 import org.ground.play.repository.SpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service("speakerService")
+@Profile("dev")
 public class SpeakerServiceImpl implements SpeakerService {
 
     private SpeakerRepository repository;

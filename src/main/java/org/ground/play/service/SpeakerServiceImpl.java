@@ -5,6 +5,7 @@ import org.ground.play.repository.SpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service("speakerService")
@@ -20,6 +21,16 @@ public class SpeakerServiceImpl implements SpeakerService {
     public SpeakerServiceImpl(SpeakerRepository repository) {
         System.out.println("SpeakerServiceImpl parameterized constructor");
         this.repository = repository;
+    }
+
+    @PostConstruct
+    /**
+     * Post construct no es para obetener conecciones a la base de datos
+     * like close conections
+     * config after all constructors
+     */
+    private void init() {
+        System.out.println("supuestamente luego de los contructores - INIT");
     }
 
     @Override

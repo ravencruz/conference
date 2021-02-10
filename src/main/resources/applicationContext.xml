@@ -9,7 +9,7 @@
 
     <bean name="speakerService"
           class="org.ground.play.service.SpeakerServiceImpl" >
-        <property name="speakerRepository" ref="speakerRepository"/>
+        <constructor-arg index="0"  ref="speakerRepository"/>
     </bean>
 
 </beans>

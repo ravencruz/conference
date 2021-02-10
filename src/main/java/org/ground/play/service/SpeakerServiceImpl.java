@@ -16,7 +16,6 @@ public class SpeakerServiceImpl implements SpeakerService {
         System.out.println("SpeakerServiceImpl no args constructor");
     }
 
-    @Autowired
     public SpeakerServiceImpl(SpeakerRepository repository) {
         System.out.println("SpeakerServiceImpl parameterized constructor");
         this.repository = repository;

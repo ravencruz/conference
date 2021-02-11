@@ -2,7 +2,6 @@ package org.ground.play.service;
 
 import org.ground.play.model.Speaker;
 import org.ground.play.repository.SpeakerRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +14,11 @@ public class SpeakerServiceImpl implements SpeakerService {
 
     private SpeakerRepository repository;
 
-    public SpeakerServiceImpl() {
-        System.out.println("SpeakerServiceImpl no args constructor");
-    }
+//    public SpeakerServiceImpl() {
+//        System.out.println("SpeakerServiceImpl no args constructor");
+//    }
 
-    @Autowired
+//    @Autowired
     public SpeakerServiceImpl(SpeakerRepository repository) {
         System.out.println("SpeakerServiceImpl parameterized constructor");
         this.repository = repository;

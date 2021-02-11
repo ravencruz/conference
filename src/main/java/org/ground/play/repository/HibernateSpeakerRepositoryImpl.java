@@ -1,8 +1,6 @@
 package org.ground.play.repository;
 
 import org.ground.play.model.Speaker;
-import org.springframework.aop.scope.ScopedObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Profile;
@@ -18,10 +16,15 @@ import java.util.List;
 @Profile("dev")
 public class HibernateSpeakerRepositoryImpl implements SpeakerRepository {
 
-    @Autowired
     private Calendar cal;
 
-    //dice que un caso de oso de esto podria ser usado para generar passwords!
+    //@Autowired As of Spring 4.3, classes with a single constructor can omit the @Autowired annotation.
+    public HibernateSpeakerRepositoryImpl(Calendar cal) {
+        this.cal = cal;
+    }
+
+    // dice que un caso de oso de esto podria ser usado para generar passwords!
+    // mentira porq no varia entre llamadas
     @Value("#{ T(java.lang.Math).random() * 100 }")
     private double seedNum;
 
